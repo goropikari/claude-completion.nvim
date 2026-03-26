@@ -12,17 +12,20 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 {
     "your-username/claude-completion.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" }, -- Optional, but useful for some extensions
-    config = function()
-        require('claude-completion').setup({
-            model = "sonnet", -- or "haiku"
-            debounce_ms = 500,
-            keymaps = {
-                accept = "<Tab>",
-                dismiss = "<C-e>",
-            }
-        })
-    end
+    -- Optional, but useful for some extensions
+-- In your lazy.nvim setup:
+{
+    "your-username/claude-completion.nvim",
+    -- Configuration options are passed directly to the setup function via the 'opts' table
+    opts = {
+        model = "sonnet", -- or "haiku"
+        debounce_ms = 500,
+        keymaps = {
+            accept = "<Tab>",
+            dismiss = "<C-e>",
+        }
+    }
+}
 }
 ```
 
