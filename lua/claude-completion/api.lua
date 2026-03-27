@@ -16,12 +16,12 @@ function M.get_completion(prompt, callback)
 	-- Construct the command
 	local cmd = {
 		cli_path,
-		"--print",
-		"--bare",
+		-- "--bare",
 		"--model",
 		model,
 		"--system-prompt",
 		system_prompt,
+		"--print",
 		prompt,
 	}
 
