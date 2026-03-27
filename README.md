@@ -20,7 +20,11 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
         keymaps = {
             accept = "<Tab>",
             dismiss = "<C-e>",
-        }
+        },
+        -- Enable debug_mode to log raw Claude CLI responses and stderr
+        debug_mode = false,
+        -- Specify the path to the Claude CLI executable if it's not in your PATH
+        claude_cli_path = "claude",
     }
 }
 ```
